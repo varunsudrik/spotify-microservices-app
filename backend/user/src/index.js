@@ -8,7 +8,7 @@ app.use(express.json()); // For parsing application/json
 
 app.use(morgan("combined"));
 
-let PORT = process.env.port || 8000;
+let PORT = process.env.PORT || 8000;
 const MONGO_URI = process.env.MONGO_URI;
 mongoose
   .connect(MONGO_URI, {
