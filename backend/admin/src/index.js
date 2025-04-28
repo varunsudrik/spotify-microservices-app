@@ -3,7 +3,11 @@ import "dotenv/config";
 import morgan from "morgan";
 import adminRoutes from "./routes/adminRoutes.js";
 import cloudinary from "cloudinary";
+import cors from "cors";
+
 let app = express();
+app.use(cors());
+
 app.use(express.json()); // For parsing application/json
 import { dbConnect, executeQuery } from "./config/db.js";
 
